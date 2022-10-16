@@ -12,15 +12,13 @@ constructor(props){
 
 render(){
   return(
-    <div className='container-fluid'>
+    <div className='container-flex'>
       <p>my drun machine</p>
-      <div class="row justify-content-md-center align-middle">
-  <div class="col-md-auto">
-    1 of 3
-  </div>
-  <div class="col-md-auto box">
+      <div className="row">
+  
+  <div className="col-md-auto box">
     Variable width content asdasd
-  </div>
+</div>
 </div>
     </div>
   );
@@ -29,12 +27,12 @@ render(){
 }
 
 
-
-
 function App() {
   return (
-    <div className="App">
+    <div className="d-flex App min-vh-100 border border-primary">
+      <div className="d-flex m-auto border border-primary align-items-center">
          <DrumMachine/> 
+      </div>
       </div>
 
   );
