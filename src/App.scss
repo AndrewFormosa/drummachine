@@ -2,8 +2,14 @@
 
 $mainBackgroundColor:rgb(171, 171, 135);
 
+.drum-pad{
+
+  width:90px;
+  height:90px;
+  border:5px solid blue;
 
 
+}
 
 body{
   background:$mainBackgroundColor;
@@ -16,18 +22,14 @@ body{
 
 .box-one{
   background: green;
-  width:200px;
-  height:200px;
+  width:300px;
+  height:300px;
   
 }
 
 .box-two{
   background: yellow;
-  width:200px;
-  height:200px;
-
+  width:300px;
+  height:300px;
 }
-.drum-pad{
-  margin:2px;
 
-}
