@@ -14,9 +14,20 @@ body{
   text-align: center;
 }
 
-.box{
+.box-one{
   background: green;
-  height:100%;
-
+  width:200px;
+  height:200px;
+  
 }
 
+.box-two{
+  background: yellow;
+  width:200px;
+  height:200px;
+
+}
+.drum-pad{
+  margin:2px;
+
+}
