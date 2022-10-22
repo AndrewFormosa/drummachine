@@ -1,16 +1,24 @@
 import logo from './logo.svg';
 import './App.scss';
 import React from 'react';
-import kick_3 from "./drumSounds/Kick_3.wav";
-import snare_3 from "./drumSounds/Snare_3.WAV";
-import kick_4 from "./drumSounds/Kick_3.wav";
-import snare_4 from "./drumSounds/Snare_3.WAV";
+import kick from "./drumSounds/Kick.wav";
+import snare from "./drumSounds/Snare.WAV";
+import clap from "./drumSounds/Clap.wav";
+import conga from "./drumSounds/Conga.wav";
+import crash from "./drumSounds/Crash.wav";
+import hhopen from "./drumSounds/Hihat_open.wav";
+import hhclosed from "./drumSounds/Hihat_closed.wav";
+import tom1 from "./drumSounds/Tom1.wav";
+import tom2 from "./drumSounds/Tom2.wav";
 
 
 const soundBanks = [
-  { "kitName": "my kit", "kitSounds": { "Q": { "sound": kick_3, "name": "kick_3" }, "W": { "sound": snare_3, "name": "snare" }, "E": { "sound": snare_3, "name": "snare" }, "A": { "sound": snare_3, "name": "snare" }, "S": { "sound": snare_3, "name": "snare" }, "D": { "sound": snare_3, "name": "snare" }, "Z": { "sound": snare_3, "name": "snare" }, "X": { "sound": snare_3, "name": "snare" } , "C": { "sound": snare_3, "name": "snare" }} },
-  { "kitName": "fcc Kit", "kitSounds": { "Q": { "sound": kick_3, "name": "kick_3" }, "W": { "sound": snare_3, "name": "snare" }, "E": { "sound": snare_3, "name": "snare" }, "A": { "sound": snare_3, "name": "snare" }, "S": { "sound": snare_3, "name": "snare" }, "D": { "sound": snare_3, "name": "snare" }, "Z": { "sound": snare_3, "name": "snare" }, "X": { "sound": snare_3, "name": "snare" } , "C": { "sound": snare_3, "name": "snare" }} },
-  { "kitName": "cool Kit", "kitSounds": { "Q": { "sound": kick_3, "name": "kick_3" }, "W": { "sound": snare_3, "name": "snare" }, "E": { "sound": snare_3, "name": "snare" }, "A": { "sound": snare_3, "name": "snare" }, "S": { "sound": snare_3, "name": "snare" }, "D": { "sound": snare_3, "name": "snare" }, "Z": { "sound": snare_3, "name": "snare" }, "X": { "sound": snare_3, "name": "snare" } , "C": { "sound": snare_3, "name": "snare" }} }
+  { "kitName": "my kit", "kitSounds": { "Q": { "sound": kick, "name": "kick" }, "W": { "sound": snare, "name": "snare" }, "E": { "sound":clap, "name": "clap" }, "A": { "sound":conga, "name": "conga" },
+   "S": { "sound": crash, "name": "crash" }, "D": { "sound": hhopen, "name": "hi-hat open" }, "Z": { "sound": hhclosed, "name": "hi-hat closed" }, "X": { "sound": tom1, "name": "tom 1" } , "C": { "sound": tom2, "name": "tom 2" }} },
+   { "kitName": "cool kit", "kitSounds": { "Q": { "sound": kick, "name": "kick" }, "W": { "sound": snare, "name": "snare" }, "E": { "sound":clap, "name": "clap" }, "A": { "sound":conga, "name": "conga" },
+   "S": { "sound": crash, "name": "crash" }, "D": { "sound": hhopen, "name": "hi-hat open" }, "Z": { "sound": hhclosed, "name": "hi-hat closed" }, "X": { "sound": tom1, "name": "tom 1" } , "C": { "sound": tom2, "name": "tom 2" }} },
+   { "kitName": "great kit", "kitSounds": { "Q": { "sound": kick, "name": "kick" }, "W": { "sound": snare, "name": "snare" }, "E": { "sound":clap, "name": "clap" }, "A": { "sound":conga, "name": "conga" },
+   "S": { "sound": crash, "name": "crash" }, "D": { "sound": hhopen, "name": "hi-hat open" }, "Z": { "sound": hhclosed, "name": "hi-hat closed" }, "X": { "sound": tom1, "name": "tom 1" } , "C": { "sound": tom2, "name": "tom 2" }} }
 ];
 
 
