@@ -101,7 +101,7 @@ class UpDownPanel extends React.Component {
     return (
       <div class="container upDownControl">
         <div class="row">
-          <div class="col-12 heading">{this.props.title}</div>
+          <div class="col-12 display-heading">{this.props.title}</div>
         </div>
         <div class="row g-0 pb-2">
           <div class="col-3">
@@ -170,7 +170,7 @@ changePower(){
           <div className='row'>
             <div className='col-10 my-1'>
               <span className='heading'>My Drum Machine</span></div>
-            <div className='col-2'>
+            <div className='col-2 d-flex justify-content-center m-auto'>
               <button class="power-switch material-symbols-outlined" style={{color:this.state.powerColor}} onClick={()=>{this.changePower()}}>power_rounded</button></div>
           </div>
         </div>

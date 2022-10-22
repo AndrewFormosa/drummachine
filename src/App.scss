@@ -17,10 +17,14 @@ border-left:2px solid black;
 
 .heading{
   font-family: 'Share Tech Mono', monospace;
-  color:rgb(208, 208, 208);
-  text-shadow: 2px 2px grey;
+  color:lightgrey;
+  text-shadow: 2px 2px rgb(0, 0, 0);
 }
 
+.display-heading{
+  color:lightgrey;
+  text-shadow: 1px 1px black;
+}
 
 @media (max-width:768px ){
 .machine-header{
@@ -56,8 +60,7 @@ button:active {
 }
 
 .power-switch{
-
-height:40px;
+height:35px;
 background:$buttonColor;
 }
 
