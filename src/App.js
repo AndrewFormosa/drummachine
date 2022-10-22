@@ -8,9 +8,9 @@ import snare_4 from "./drumSounds/Snare_3.WAV";
 
 
 const soundBanks = [
-  { "kitName": "kit1", "kitSounds": { "Q": { "sound": kick_3, "name": "kick_3" }, "W": { "sound": snare_3, "name": "snare" }, "E": { "sound": snare_3, "name": "snare" }, "A": { "sound": snare_3, "name": "snare" }, "S": { "sound": snare_3, "name": "snare" }, "D": { "sound": snare_3, "name": "snare" }, "Z": { "sound": snare_3, "name": "snare" }, "X": { "sound": snare_3, "name": "snare" } , "C": { "sound": snare_3, "name": "snare" }} },
-  { "kitName": "kit2", "kitSounds": { "Q": { "sound": kick_4, "name": "kick_4" }, "W": { "sound": snare_4, "name": "snare ok" } } },
-  { "kitName": "kit3", "kitSounds": { "Q": { "sound": kick_4, "name": "kick_4" }, "W": { "sound": snare_4, "name": "snare ok" } } }
+  { "kitName": "my kit", "kitSounds": { "Q": { "sound": kick_3, "name": "kick_3" }, "W": { "sound": snare_3, "name": "snare" }, "E": { "sound": snare_3, "name": "snare" }, "A": { "sound": snare_3, "name": "snare" }, "S": { "sound": snare_3, "name": "snare" }, "D": { "sound": snare_3, "name": "snare" }, "Z": { "sound": snare_3, "name": "snare" }, "X": { "sound": snare_3, "name": "snare" } , "C": { "sound": snare_3, "name": "snare" }} },
+  { "kitName": "fcc Kit", "kitSounds": { "Q": { "sound": kick_3, "name": "kick_3" }, "W": { "sound": snare_3, "name": "snare" }, "E": { "sound": snare_3, "name": "snare" }, "A": { "sound": snare_3, "name": "snare" }, "S": { "sound": snare_3, "name": "snare" }, "D": { "sound": snare_3, "name": "snare" }, "Z": { "sound": snare_3, "name": "snare" }, "X": { "sound": snare_3, "name": "snare" } , "C": { "sound": snare_3, "name": "snare" }} },
+  { "kitName": "cool Kit", "kitSounds": { "Q": { "sound": kick_3, "name": "kick_3" }, "W": { "sound": snare_3, "name": "snare" }, "E": { "sound": snare_3, "name": "snare" }, "A": { "sound": snare_3, "name": "snare" }, "S": { "sound": snare_3, "name": "snare" }, "D": { "sound": snare_3, "name": "snare" }, "Z": { "sound": snare_3, "name": "snare" }, "X": { "sound": snare_3, "name": "snare" } , "C": { "sound": snare_3, "name": "snare" }} }
 ];
 
 
@@ -43,7 +43,7 @@ class DrumPadPanel extends React.Component {
 if(this.props.power){
 
     let audioElement=document.getElementById(padHit);
-    audioElement.volume=this.props.vol*0.2;
+    audioElement.volume=this.props.vol*0.02;
     audioElement.currentTime=0;
     audioElement.play();
     this.props.callback(this.props.bank.kitSounds[padHit].name);
@@ -178,7 +178,7 @@ class DrumMachine extends React.Component {
       bankNumber: 1,
       currentHit: "",
       power: true,
-      powerColor: "green",
+      powerColor: "rgb(115, 255, 0)",
     };
     this.changeCurrentHit = this.changeCurrentHit.bind(this);
   }
@@ -186,11 +186,12 @@ class DrumMachine extends React.Component {
   changePower() {
     if (this.state.power) {
       this.setState({ power: false });
-      this.setState({ powerColor: "black" })
+      this.setState({ powerColor: "black" });
 
     } else {
       this.setState({ power: true });
-      this.setState({ powerColor: "rgb(115, 255, 0)" })
+      this.setState({ powerColor: "rgb(115, 255, 0)" });
+      this.setState({currentHit:""});
     };
 
   }
@@ -205,6 +206,7 @@ class DrumMachine extends React.Component {
 
   changeSoundBank(val) {
     this.setState({ bankNumber: val });
+    this.setState({currentHit:""});
   }
 
 
