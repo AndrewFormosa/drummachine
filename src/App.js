@@ -11,14 +11,40 @@ import hhclosed from "./drumSounds/Hihat_closed.wav";
 import tom1 from "./drumSounds/Tom1.wav";
 import tom2 from "./drumSounds/Tom2.wav";
 
+import kick8B from "./drumSounds/kick_8Bit.wav";
+import snare8B from "./drumSounds/snare_8Bit.wav";
+import clap8B from "./drumSounds/clap_8bit.wav";
+import hihat18B from "./drumSounds/hihat1_8Bit.wav";
+import hihat28B from "./drumSounds/hihat2_8Bit.wav";
+import crash8B from "./drumSounds/crash_8Bit.wav";
+import fx18B from "./drumSounds/fx1_8bit.wav";
+import fx28B from "./drumSounds/fx2_8bit.wav";
+import fx38B from "./drumSounds/fx3_8Bit.wav";
+
+import kick808 from "./drumSounds/kick_808.wav";
+import snare808 from "./drumSounds/snare_808.wav";
+import clap808 from "./drumSounds/clap_808.wav";
+import hhopen808 from "./drumSounds/hhopen_808.wav";
+import hhclosed808 from "./drumSounds/hhclosed_808.wav";
+import crash808 from "./drumSounds/crash_808.wav";
+import cow808 from "./drumSounds/cow_808.wav";
+import fx1808 from "./drumSounds/fx1_808.WAV";
+import fx2808 from "./drumSounds/fx2_808.WAV";
+
+
+
+
 
 const soundBanks = [
   { "kitName": "my kit", "kitSounds": { "Q": { "sound": kick, "name": "kick" }, "W": { "sound": snare, "name": "snare" }, "E": { "sound":clap, "name": "clap" }, "A": { "sound":conga, "name": "conga" },
    "S": { "sound": crash, "name": "crash" }, "D": { "sound": hhopen, "name": "hi-hat open" }, "Z": { "sound": hhclosed, "name": "hi-hat closed" }, "X": { "sound": tom1, "name": "tom 1" } , "C": { "sound": tom2, "name": "tom 2" }} },
-   { "kitName": "cool kit", "kitSounds": { "Q": { "sound": kick, "name": "kick" }, "W": { "sound": snare, "name": "snare" }, "E": { "sound":clap, "name": "clap" }, "A": { "sound":conga, "name": "conga" },
-   "S": { "sound": crash, "name": "crash" }, "D": { "sound": hhopen, "name": "hi-hat open" }, "Z": { "sound": hhclosed, "name": "hi-hat closed" }, "X": { "sound": tom1, "name": "tom 1" } , "C": { "sound": tom2, "name": "tom 2" }} },
-   { "kitName": "great kit", "kitSounds": { "Q": { "sound": kick, "name": "kick" }, "W": { "sound": snare, "name": "snare" }, "E": { "sound":clap, "name": "clap" }, "A": { "sound":conga, "name": "conga" },
-   "S": { "sound": crash, "name": "crash" }, "D": { "sound": hhopen, "name": "hi-hat open" }, "Z": { "sound": hhclosed, "name": "hi-hat closed" }, "X": { "sound": tom1, "name": "tom 1" } , "C": { "sound": tom2, "name": "tom 2" }} }
+   { "kitName": "8 Bit Style", "kitSounds": { "Q": { "sound": kick8B, "name": "8 bit kick" }, "W": { "sound": snare8B, "name": "8 bit snare" },
+    "E": { "sound":clap8B, "name": "8 bit clap" }, "A": { "sound":hihat18B, "name": "8 bit hi hat open" },
+   "S": { "sound": hihat28B, "name": "8 bit hi hat closed" }, "D": { "sound": crash8B, "name": "8 bit crash" }, "Z": { "sound": fx18B, "name": "8 bit FX one" }, "X": { "sound": fx28B, "name": "8 bit FX two" } , "C": { "sound": fx38B, "name": "8 bit FX three" }} },
+   { "kitName": "808 Kit", "kitSounds": { "Q": { "sound": kick808, "name": "808 kick" }, "W": { "sound": snare808, "name": "808 snare" }, "E": { "sound":clap808, "name": "808 clap" },
+    "A": { "sound":hhopen808, "name": "808 hi hat open" },
+   "S": { "sound": hhclosed808, "name": "808 hi hat closed" }, "D": { "sound": crash808, "name": "808 crash" }, "Z": { "sound": cow808, "name": "808 cow bell" }, 
+   "X": { "sound": fx1808, "name": "808 FX one" } , "C": { "sound": fx2808, "name": "808 FX two" }} }
 ];
 
 
@@ -36,7 +62,7 @@ class DrumPadPanel extends React.Component {
 
 
   handleKeyPress = (e) => {
-    this.playSound(e.key);
+    this.playSound(e.key.toUpperCase());
   }
 
   handleClick(e) {
@@ -51,7 +77,7 @@ class DrumPadPanel extends React.Component {
 if(this.props.power){
 
     let audioElement=document.getElementById(padHit);
-    audioElement.volume=this.props.vol*0.02;
+    audioElement.volume=this.props.vol*0.05;
     audioElement.currentTime=0;
     audioElement.play();
     this.props.callback(this.props.bank.kitSounds[padHit].name);
@@ -69,7 +95,7 @@ if(this.props.power){
   render() {
     return (
 
-      <div className='container-flex'>
+      <div className='container-flex'  tabindex="-1">
         <div className="row g-2">
           <div className="col-4">
             <button id={this.props.bank.kitSounds["Q"].name} value="Q" onClick={this.handleClick} className="drum-pad">
