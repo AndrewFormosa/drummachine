@@ -1,16 +1,25 @@
 {
   "files": {
-    "main.css": "/drummachine/static/css/main.073c9b0a.css",
-    "main.js": "/drummachine/static/js/main.7703e293.js",
+    "main.css": "/drummachine/static/css/main.e81ff21f.css",
+    "main.js": "/drummachine/static/js/main.d8032991.js",
     "static/js/787.e9bed731.chunk.js": "/drummachine/static/js/787.e9bed731.chunk.js",
+    "static/media/Crash.wav": "/drummachine/static/media/Crash.25a89f7a05ae1bec54f9.wav",
+    "static/media/Hihat_open.wav": "/drummachine/static/media/Hihat_open.cdf9554097a0665dcb16.wav",
+    "static/media/Kick.wav": "/drummachine/static/media/Kick.c5b8ba529f0c2e153c78.wav",
+    "static/media/Hihat_closed.wav": "/drummachine/static/media/Hihat_closed.b1c96324f7bd5a79f389.wav",
+    "static/media/Clap.wav": "/drummachine/static/media/Clap.b385a855d8e3c0030303.wav",
+    "static/media/Snare.WAV": "/drummachine/static/media/Snare.cd642fbdec2a36a4701d.WAV",
+    "static/media/Tom1.wav": "/drummachine/static/media/Tom1.1cfd74b5f1e8be1e680c.wav",
+    "static/media/Tom2.wav": "/drummachine/static/media/Tom2.ffc60cb763581b944db3.wav",
+    "static/media/Conga.wav": "/drummachine/static/media/Conga.3dd4977031316d14cea2.wav",
     "static/media/logo.svg": "/drummachine/static/media/logo.6ce24c58023cc2f8fd88fe9d219db6c6.svg",
     "index.html": "/drummachine/index.html",
-    "main.073c9b0a.css.map": "/drummachine/static/css/main.073c9b0a.css.map",
-    "main.7703e293.js.map": "/drummachine/static/js/main.7703e293.js.map",
+    "main.e81ff21f.css.map": "/drummachine/static/css/main.e81ff21f.css.map",
+    "main.d8032991.js.map": "/drummachine/static/js/main.d8032991.js.map",
     "787.e9bed731.chunk.js.map": "/drummachine/static/js/787.e9bed731.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.073c9b0a.css",
-    "static/js/main.7703e293.js"
+    "static/css/main.e81ff21f.css",
+    "static/js/main.d8032991.js"
   ]
 }
